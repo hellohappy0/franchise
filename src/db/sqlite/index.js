@@ -53,7 +53,7 @@ export class Configure extends Component{
         return <div>
             <img src={require('../img/sqlite.svg')} style={{ height: 40 }} />
             <p>
-                Franchise includes an in-browser version of the powerful SQLite engine.
+                Franchise包含了一个功能强大的 SQLite引擎 的在线版
             </p>
 
             <input style={{
@@ -72,7 +72,7 @@ export class Configure extends Component{
                    </button>
             </div> : <div style={{ opacity: connect.status == 'connecting' ? 0.5 : 1 }}>
                 <p>
-                    Click the button below to browse for <b>CSV</b>, <b>XLSX</b>, <b>JSON</b>, <b>SQLite</b>, or <b>SQL</b> files on your computer.
+                    点击下面按钮来加载你电脑中的 for <b>CSV</b>, <b>XLSX</b>, <b>JSON</b>, <b>SQLite</b>, 或 <b>SQL</b> 数据(库)文件。
                 </p>
                 <div style={{ display: 'flex', alignItems: 'flex-end' }}>
                     <div className="open-thumb" onClick={e => this.picker.click()} style={{ flexShrink: 0 }}>
@@ -83,23 +83,23 @@ export class Configure extends Component{
                 </div>
                 <br />
                 <p>
-                    Don’t have any data handy? No problem, check out one of our <b>sample notebooks</b>:
+                    如果你没有数据，你可以试一下我们的<b>样例数据：</b>
                 </p>
 
                 <div className="samples">
                     <a href="/demos/crime_v8.html">
                     <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/map.png')})`}}>
-                        <div className="title">Crime in LA</div>
+                        <div className="title">洛杉矶犯罪</div>
                     </div>
                     </a>
                     <a href="/demos/crime_v8.html">
                     <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/scatter.png')})`}}>
-                        <div className="title">Sales Data</div>
+                        <div className="title">销售数据</div>
                     </div>
                     </a>
                     <a href="/demos/enron.html">
                     <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/card.png')})`}}>
-                        <div className="title">Enron Emails</div>
+                        <div className="title">Enron电子邮件</div>
                     </div>
                     </a>
                 </div>
@@ -204,7 +204,7 @@ export async function connectDB(picker, name){
         if(file && file.byteLength && file.byteLength > 10000000){
             await swal({
                 title: 'Large Files Not Supported',
-                text: 'Currently, the pure-javascript SQLite engine doesn\'t play nicely with large files. Caveat Emptor, Here Be Dragons.',
+                text: '目前，纯javascript SQLite引擎不能很好地处理超大文件。',
                 type: 'error',
             })
         }
@@ -388,8 +388,8 @@ export function Clippy(props){
             <h2>Links</h2>
             <ul>
             <li><a target="_blank" href="https://sqlite.org/lang.html">SQLite Language Reference</a></li>
-            <li><a target="_blank" href="http://tutlane.com/tutorial/sqlite/sqlite-group-by-clause">GROUP BY Tutorial</a></li>
-            <li><a target="_blank" href="http://www.sqlitetutorial.net/sqlite-inner-join/">INNER JOIN Tutorial</a></li>
+            <li><a target="_blank" href="https://tutlane.com/tutorial/sqlite/sqlite-group-by-clause">GROUP BY Tutorial</a></li>
+            <li><a target="_blank" href="https://www.sqlitetutorial.net/sqlite-inner-join/">INNER JOIN Tutorial</a></li>
             </ul>
             </section>
 

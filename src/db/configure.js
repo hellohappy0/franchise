@@ -50,12 +50,12 @@ export default class Configure extends React.PureComponent {
                             <i className="fa fa-spinner fa-spin fa-fw"></i>
                             {" "}
                             Connecting to {db.name || 'database'}</div>,
-                    connected: <div className="body">Connected to {db.name}</div>,
-                    disconnected: <div className="body">Disconnected from {db.name} {connect.error ? <i>({connect.error})</i> : null}</div>,
-                    unconfigured: <div className="body">Connect to a Database</div>
+                    connected: <div className="body">连接到：{db.name}</div>,
+                    disconnected: <div className="body">断开连接：{db.name} {connect.error ? <i>({connect.error})</i> : null}</div>,
+                    unconfigured: <div className="body">连接数据库</div>
                 }[connect.status]}
                 {!force_open ? <div className="toggle" >
-                    <div>Settings <i
+                    <div>设置 <i
                         className={"fa " + (config.open ? 'fa-caret-up' : 'fa-caret-down')}
                         aria-hidden="true"></i></div>
                 </div> : null}

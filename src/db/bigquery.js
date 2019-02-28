@@ -56,13 +56,13 @@ export class Configure extends React.Component {
     return <div>
       <img src={ require('./img/bigquery.svg')} style={{ height: 40 }} />
       <div className='pt-callout pt-intent-primary' style={{margin: '10px 0'}}>
-        <h5>Getting a BigQuery Keyfile</h5>
+        <h5>获取BigQuery密钥文件</h5>
       <ol>
-        <li>Go to the <a href="https://console.developers.google.com/projectselector/apis/credentials"><b>API Console Credentials</b></a> page</li>
-        <li>From the project drop-down, select your project.</li>
-        <li>On the <b>Credentials</b> page, select the <b>Create credentials</b> drop-down, then select <b>Service account key</b>.</li>
-        <li>From the Service account drop-down, select an existing service account or create a new one.</li>
-        <li>For <b>Key type</b>, select <b>JSON</b>, then select <b>Create</b>.</li>
+        <li>（国内不可用）去<a href="https://console.developers.google.com/projectselector/apis/credentials"><b>API控制台凭证</b></a>网页</li>
+        <li>从“项目”下拉列表中，选择您的项目。</li>
+        <li>在<b>凭证</b> 页面，选择<b>Create credentials</b> 下拉菜单，然后选择<b>Service account key</b>。</li>
+        <li>从“Service account”下拉列表中，选择现有的服务帐户或创建新的服务帐户。</li>
+        <li>从<b>Key type</b>选择<b>JSON</b>，再选择<b>Create</b>。</li>
         </ol>
       </div>
       <div className='pg-form'>
@@ -296,8 +296,8 @@ export function Clippy({connect, config}){
             <li><a target="_blank" href="https://cloud.google.com/bigquery/docs/reference/legacy-sql">BigQuery "Legacy SQL" Reference</a></li>
             <li><a target="_blank" href="https://cloud.google.com/bigquery/docs/reference/standard-sql/">BigQuery "Standard SQL" Reference</a></li>
 
-            <li><a target="_blank" href="http://tutlane.com/tutorial/sqlite/sqlite-group-by-clause">GROUP BY Tutorial</a></li>
-            <li><a target="_blank" href="http://www.sqlitetutorial.net/sqlite-inner-join/">INNER JOIN Tutorial</a></li>
+            <li><a target="_blank" href="https://tutlane.com/tutorial/sqlite/sqlite-group-by-clause">GROUP BY Tutorial</a></li>
+            <li><a target="_blank" href="https://www.sqlitetutorial.net/sqlite-inner-join/">INNER JOIN Tutorial</a></li>
             </ul>
             </section>
 

@@ -71,7 +71,7 @@ export class Configure extends React.Component {
           <div>
             <UnmountClosed isOpened={!!credentials.autofilled && connect.bridge_status === 'connected'}>
               <div className='pt-callout pt-icon-tick pt-intent-success'>
-                  <div>Franchise auto-filled some of your credentials using your system's defaults.</div>
+                  <div>Franchise使用系统的默认值自动填写你的一些凭证。</div>
               </div>
             </UnmountClosed>
             <div className='pt-control-group pt-fill'>

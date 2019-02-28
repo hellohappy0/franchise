@@ -59,22 +59,16 @@ class Header extends React.PureComponent {
 
 class SloganToggler extends React.PureComponent {
     slogans = [
-        'what you get when you add a lot of sequels',
+        '点击标语文本会自动变哦',
 
-        'the mcdonalds of sql clients',
-        'vaguely sounds like "french fries"',
-        'the tool that makes you click on the slogan text',
-        'polyamorously relational before it was cool',
-        'the ibuprofen for data headaches',
-        'Give me your tired, your poor, your huddled data yearning to breathe free.',
-        'remarkably painless',
-        'best thing since sliced bread',
-        'how do you pronounce sql anyway',
-        'shall i compare thee to a summer\'s data',
-        'a sql notebook',
-        'a new kind of sql client',
-        'look on my JOINs ye mighty and despair',
-        'hello future'
+        'sql客户端的快餐店',
+        '给我你渴望自由呼吸的缩成一团的数据',
+        '你是怎么念 sql 的？',
+        '我可以把你和主要的数据比较一下',
+        '一个sql笔记本',
+        '一种新的sql客户端',
+        '看着我的加入，感受到强大而绝望没有！',
+        '你好未来！'
     ]
     state = { index: 0 }
     render(){

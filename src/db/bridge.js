@@ -94,30 +94,30 @@ export function disconnectBridge(){
 export function FranchiseClientConnector({ connect }){
     if(connect.bridge_status == 'mixed_fail'){
         return <p><div className='pt-callout pt-intent-danger'>
-            <h5>Browser Compatibility</h5>
+            <h5>浏览器兼容</h5>
             <p>
-                The Franchise web interface connects to a local bridge application to mediate connections to external databases. 
+                Franchise调用网络接口桥接到本地应用程序，来与外部数据库连接。
             </p>
             <p>
-                <b>Unfortunately</b>, your browser does not support connections between secure HTTPS websites and desktop applications. 
+                <b>不幸的是</b>，您的浏览器不支持安全HTTPS网站和桌面应用程序之间的连接。
             </p>
             <p>
-                We're actively looking into workarounds, but in the mean time, try using <b>Google Chrome</b>.
+                我们正在积极寻找解决办法，但你可以尝试使用其他浏览器，比如 <b>谷歌Chrome浏览器</b>.
             </p>
         </div></p>
     }
 
     return <UnmountClosed isOpened={connect.bridge_status !== 'connected' && !isElectron()}>
         <div className='pt-callout pt-intent-warning'>
-            <h5>Connect the Database Bridge</h5>
+            <h5>桥接本机的数据库</h5>
 
-            <div>Run <code>npx franchise-client@0.2.7</code> in your terminal to start the franchise database bridge. 
+            <div>在你的终端(比如win系统的cmd)运行 <code>npx franchise-client@0.2.7</code> 以启用franchise数据库桥。
             </div>
             <div>
-            If the npx command is not found, <a href="https://nodejs.org/en/download/current/">install the latest version of node</a> and try again.
+            如果找不到npx命令， <a href="https://nodejs.org/en/download/current/">安装最新版本的node</a>然后再试。
             </div>
             
-            <div>These instructions will automatically collapse as soon as the bridge is detected.</div>
+            <div>一旦检测到数据库桥，上面提示会消失。</div>
         </div>
     </UnmountClosed>
 }
