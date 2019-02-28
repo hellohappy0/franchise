@@ -146,7 +146,7 @@ export class Cell extends React.PureComponent {
                         options={md ? md_options : sql_options } />
                     
                     <BlueprintTooltip
-                        content={<span>Refer to the results of this cell with <strong>{db.reference(view.name || view.suggestedName)}</strong></span>}
+                        content={<span>引用此单元的结果 <strong>{db.reference(view.name || view.suggestedName)}</strong></span>}
                         className="pt-tooltip-indicator">
                         <div className={"name " + ((view.result && view.result.nameable && db.reference) ? "shown" : "")} >
                             <span style={{color: '#adb7bf'}}>{db.reference('SPLITTER').split('SPLITTER')[0] || ''}</span>

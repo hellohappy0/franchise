@@ -256,7 +256,7 @@ export function Clippy(props){
             <h2>Links</h2>
             <ul>
             <li><a target="_blank" href="https://sqlite.org/lang.html">SQLite Language Reference</a></li>
-            <li><a target="_blank" href="http://tutlane.com/tutorial/sqlite/sqlite-group-by-clause">GROUP BY Tutorial</a></li>
+            <li><a target="_blank" href="https://tutlane.com/tutorial/sqlite/sqlite-group-by-clause">GROUP BY Tutorial</a></li>
             <li><a target="_blank" href="https://www.sqlitetutorial.net/sqlite-inner-join/">INNER JOIN Tutorial</a></li>
             </ul>
             </section>
