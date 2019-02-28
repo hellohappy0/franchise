@@ -10,10 +10,10 @@ export default function ExportButton(){
     return <span>
         <div className="pt-button-group pt-large" style={{ float: 'right' }}>
             <button type="button" className="pt-button" onClick={e => downloadNotebook(false) }>
-                <i className="fa fa-download" aria-hidden="true"></i> Download
+                <i className="fa fa-download" aria-hidden="true"></i> 下载(只可读)
             </button>
             <Popover position={Position.BOTTOM} content={<Menu>
-                <MenuItem iconName="unlock" text="下载凭证" onClick={e => downloadNotebook(true)} />
+                <MenuItem iconName="unlock" text="下载(带凭证可读写)" onClick={e => downloadNotebook(true)} />
             </Menu>}>
                 <button type="button" className="pt-button pt-icon-caret-down"></button>
             </Popover>
@@ -133,7 +133,7 @@ async function downloadNotebook(withCredentials){
         const title = (await swal({
             input: 'text',
             showCancelButton: true,
-            title: 'Export Notebook' + (withCredentials ? ' (with credentials)' : ''),
+            title: '导出该网页' + (withCredentials ? ' (带访问凭证)' : ''),
             inputPlaceholder: default_name
         }) || default_name)
 
@@ -143,7 +143,7 @@ async function downloadNotebook(withCredentials){
 
         requestAnimationFrame(e => a.remove())
     } catch (e) {
-        console.log('cancelled download')
+        console.log('取消下载')
     }
 }
 

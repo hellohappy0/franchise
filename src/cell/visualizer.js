@@ -26,7 +26,7 @@ const DownloadButton = ({type, onClick, disabled}) =>
 
 class DownloadVisualizer extends React.Component {
   static key = 'download-result'
-  static desc = "Export Results"
+  static desc = "导出结果"
   static icon =
     <i className="fa fa-download" aria-hidden="true"></i>
 
@@ -160,7 +160,7 @@ Leaflet.Icon.Default.mergeOptions({
 
 class MapVisualizer extends React.Component {
   static key = 'map'
-  static desc = "Map View"
+  static desc = "地图视图"
   static icon = <i className="fa fa-map-marker" aria-hidden="true"></i>
 
   static test(result) {
@@ -273,8 +273,7 @@ class MapVisualizer extends React.Component {
           {this.getLayerControl()}
           {result.values.map((k, i) => this.getMarkers(k, i))}
           <TileLayer
-            url='https://{s}.google.com/vt?x={x}&y={y}&z={z}'
-            subdomains={googleSubdomains}
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           />
         </Map>
       </div>
@@ -285,7 +284,7 @@ class MapVisualizer extends React.Component {
 
 class SingleResultVisualizer extends React.Component {
   static key = 'single-result'
-  static desc = "Single Result"
+  static desc = "单一结果"
   static icon =
     <i className="fa fa-list" aria-hidden="true"></i>
 
@@ -394,11 +393,11 @@ export class ResultVisualizer extends React.Component {
           }
           <div className="spacer"/>
 
-          {fullscreen ? <Tooltip content="Exit Full Screen">
+          {fullscreen ? <Tooltip content="退出全屏">
             <button onClick={() => this.onFullScreen(false)}>
               <i className="fa fa-compress" aria-hidden="true"></i>
             </button>
-          </Tooltip> : <Tooltip content="Full Screen">
+          </Tooltip> : <Tooltip content="全屏">
             <button onClick={() => this.onFullScreen(true)}>
               <i className="fa fa-expand" aria-hidden="true"></i>
             </button>

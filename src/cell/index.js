@@ -129,7 +129,7 @@ export class Cell extends React.PureComponent {
             keyMap: "sublime",
             lineWrapping: true,
             theme: 'md',
-            placeholder: 'Type Markdown here...',
+            placeholder: '在这输入Markdown格式...',
             showPredictions: false
         }
 
@@ -160,13 +160,13 @@ export class Cell extends React.PureComponent {
                     </BlueprintTooltip>
 
                     <div className='controls' onMouseDown={this.props.beginDrag}>
-                        <Tooltip content="Archive Cell">
+                        <Tooltip content="存档该单元">
                             <button onClick={this.props.close} title="Archive Cell">
                                 <i className="fa fa-close" aria-hidden="true"></i>
                             </button>
                         </Tooltip>
                         
-                        {md ? null : <Tooltip content="Clone Cell">
+                        {md ? null : <Tooltip content="复制该单元">
                             <button onClick={this.props.fork}>
                                 <i className="fa fa-clone" aria-hidden="true"></i>
                             </button>
@@ -174,14 +174,14 @@ export class Cell extends React.PureComponent {
 
                         <div className="spacer" />
                         {md ? null :
-                        (connect.status === 'connected' ? <Tooltip content="Run Query (Cmd-Enter)" intent={Intent.SUCCESS}>
+                        (connect.status === 'connected' ? <Tooltip content="运行查询(Cmd-Enter)" intent={Intent.SUCCESS}>
                             <button onClick={ e => runCell(view.id) }>
                                 {view.loading ?
                                     <i className="fa fa-gear fa-spin" aria-hidden="true"></i> :
                                     <i className={"fa fa-play " + ((view.query || '').trim() ? 'runnable' : '')} aria-hidden="true"></i>
                                 }
                             </button>
-                        </Tooltip>  : <Tooltip content="No database connected" intent={Intent.WARNING}>
+                        </Tooltip>  : <Tooltip content="没有连接数据库" intent={Intent.WARNING}>
                             <button title="No database connected" data-tip="No database connected" onClick={ e => runCell(view.id) }>
                                 <i className="fa fa-exclamation-triangle" aria-hidden="true"></i>
                             </button>
@@ -260,8 +260,8 @@ export async function runCell(cellId){
         // immediately invoking swal causes it to be automatically dismissed
         // when runCell is triggered by Cmd-Enter
         requestAnimationFrame(_ => swal(
-            'Oops...',
-            "No database connected! Please connect to a database before running queries. ",
+            '喔...',
+            "没有连接数据库！请在运行查询之前连接到数据库。 ",
             'error'
         ))
         return
@@ -359,14 +359,14 @@ function SnippetWidget({ connect, view, cmr, updateView, config }){
                 >{table.name}</div>
             </BlueprintTooltip>
         )}
-        <BlueprintTooltip content={"Create Table"} position={Position.BOTTOM} intent={Intent.WARNING}>
+        <BlueprintTooltip content={"新建表格"} position={Position.BOTTOM} intent={Intent.WARNING}>
             <div className="token create-table" 
                     onClick={e => replaceText(db.create_table_snippet(connect.schema), true) }>
                     <span className="pt-icon-standard pt-icon-plus"></span>
                 </div>
         </BlueprintTooltip>
 
-        <BlueprintTooltip content={"Convert to Markdown Cell"} position={Position.BOTTOM}>
+        <BlueprintTooltip content={"转换为Markdown单元"} position={Position.BOTTOM}>
             <div className="token create-text" 
                     onClick={e => {
                         updateView({ markdown: true })
@@ -433,12 +433,12 @@ export class ArchivedCell extends React.PureComponent {
 	                        lineWrapping: true
 	                    }} />
 	                <div className='controls'>
-                        <Tooltip content="Unarchive">
+                        <Tooltip content="回到未归档">
     	                    <button onClick={e => untrashCell(view.id)}>
     	                        <i className="fa fa-level-up" aria-hidden="true"></i>
     	                    </button>
                         </Tooltip>
-                        <Tooltip content="Remove Permanently" intent={Intent.DANGER}>
+                        <Tooltip content="永久移除" intent={Intent.DANGER}>
     	                    <button onClick={e => removeTrash(view.id)}>
     	                        <i className="fa fa-trash" aria-hidden="true"></i>
     	                    </button>   

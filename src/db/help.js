@@ -17,7 +17,7 @@ export default function HelpPage(props){
 
     return <div className="help-page">
         <div className="help-tab" onClick={ e => animateScrollHere(e.target) }>
-            <span className="pt-icon-standard pt-icon-help"></span>  {db.name} Help
+            <span className="pt-icon-standard pt-icon-help"></span>  {db.name} 帮助
         </div>
         <div className="help-content">
             {db.Clippy ? <db.Clippy key="clippy" connect={connect} config={config[connect.active]}/> : null}

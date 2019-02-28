@@ -84,6 +84,8 @@ export class Configure extends Component{
                 <br />
                 <p>
                     如果你没有数据，你可以试一下我们的<b>样例数据：</b>
+					<br/>
+					<strong>注意，部分地图底图国内不可用</strong>
                 </p>
 
                 <div className="samples">

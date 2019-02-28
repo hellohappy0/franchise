@@ -24,7 +24,7 @@ const pass = (x, ...y) => (console.log(x, ...y), x)
 
 export class LineChartVisualizer extends React.Component {
   static key = 'line-chart';
-  static desc = "Line Chart";
+  static desc = "线形图";
   static icon = <i className="fa fa-line-chart" aria-hidden="true"></i>;
 
   static test(result){
@@ -107,7 +107,7 @@ export class LineChartVisualizer extends React.Component {
 
 export class BarChartVisualizer extends React.Component {
   static key = 'bar-chart';
-  static desc = "Bar Chart";
+  static desc = "条形图";
   static icon = <i className="fa fa-bar-chart" aria-hidden="true"></i>;
 
   static test(result){
@@ -196,7 +196,7 @@ const pairs = arr => {
 
 export class Chart2DVisualizer extends React.Component {
   static key = 'chart-2d';
-  static desc = "Scatter Plot";
+  static desc = "散点图";
   static icon = <span className="pt-icon-standard pt-icon-scatter-plot"></span>;
 
   static test(result){

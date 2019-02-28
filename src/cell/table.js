@@ -10,7 +10,7 @@ import swal from 'sweetalert2'
 
 
 export class TableVisualizer extends React.Component {
-    static desc = "Table View";
+    static desc = "表格视图";
     static key = 'table';
     static icon =
         // <span className="pt-icon-standard pt-icon-th"></span>;
@@ -153,7 +153,7 @@ import { Slider, Button, EditableText } from '@blueprintjs/core'
 
 export class CardVisualizer extends React.Component {
   static key = 'single-row';
-  static desc = "Card View";
+  static desc = "卡片视图";
   static icon =
     <i className="fa fa-vcard-o" aria-hidden="true"></i>;
 
@@ -262,7 +262,7 @@ export class CardVisualizer extends React.Component {
 
 export class PivotVisualizer extends React.Component {
     static key = 'pivot';
-    static desc = "Pivot Table";
+    static desc = "数据透视";
     static icon =
         <span className="pt-icon-standard pt-icon-pivot-table"></span>;
 

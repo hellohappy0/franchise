@@ -4,7 +4,7 @@ import classList from 'classnames'
 
 export class ExplainVisualizer extends React.Component {
   static key = 'explain';
-  static desc = "Explain Visualizer";
+  static desc = "描述可视化工具";
   static icon = <i className="fa fa-cogs" />
 
   static test(result){

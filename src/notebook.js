@@ -84,8 +84,8 @@ function trashViewer({ notebook, trash, connect }){
         <span>
             <div className="toggler" onClick={e => State.apply('trash', 'open', U.toggle)}>{
                 trash.open ? 
-                <div><span>▼</span> Collapse Archived Cells ({ trash.cells.length })</div> :
-                <div><span>▶</span> Open Archived Cells ({ trash.cells.length })</div>
+                <div><span>▼</span> 折叠归档单元格 ({ trash.cells.length })</div> :
+                <div><span>▶</span> 展开归档单元格 ({ trash.cells.length })</div>
             }</div>
         </span>
     </div>;
