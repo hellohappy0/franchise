@@ -79,7 +79,7 @@ export class Configure extends Component{
                         <i className="fa fa-3x fa-folder-open" aria-hidden="true"></i>
                         <div style={{ display: 'inline-block', width: 70, marginLeft: 10 }}>Browse Data File</div>
                     </div>
-                    <div style={{ flexGrow: 1 }}> or create a <a href="javascript:void(0)" onClick={e => connectDB()}>blank notebook</a> </div>
+                    <div style={{ flexGrow: 1 }}> 或创建一个 <a href="javascript:void(0)" onClick={e => connectDB()}>空的数据簿</a> </div>
                 </div>
                 <br />
                 <p>
@@ -92,7 +92,7 @@ export class Configure extends Component{
                         <div className="title">洛杉矶犯罪</div>
                     </div>
                     </a>
-                    <a href="/demos/crime_v8.html">
+                    <a href="/demos/sales.html">
                     <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/scatter.png')})`}}>
                         <div className="title">销售数据</div>
                     </div>

@@ -38,13 +38,13 @@ function restoreDefault(){
 window.addEventListener("message", e => {
     if(e.data && e.data.action === 'franchise-import'){
         try {
-            console.log('restoring from postmessage')
+            console.log('从邮件中恢复')
         } catch (err) { console.error(err) }
     }
 }, false);
 
 export function importData(dump){
-    if(dump.version != 2) throw new Error('Incompatible format version');
+    if(dump.version != 2) throw new Error('格式版本不兼容');
     State.set(dump.state);
     if(dump.autoconnect){
         let db = getDB();
@@ -52,7 +52,7 @@ export function importData(dump){
         if(db.connectDB){
             db.connectDB(dump.databaseDump)
         }else{
-            console.warn('Active database connector does not export connectDB method.')
+            console.warn('活动数据库连接器无法导出connectDB。')
         }
     }
 }
@@ -70,11 +70,11 @@ if(State.get()){
         var data = JSON.parse(sessionStorage.autosave)
     } catch (err) { console.error(err) }
     Toaster.show({
-        message: 'Restored from most recent autosave.',
+        message: '从最近的自动保存恢复。',
         intent: Intent.SUCCESS,
         action: {
             onClick: () => restoreDefault(),
-            text: "Clear Notebook"
+            text: "清除记录"
         }
     })
     importData(data)
@@ -84,11 +84,11 @@ if(State.get()){
     } catch (err) { console.error(err) }
     if(data){
         Toaster.show({
-            message: 'Restore from the most recent autosave?',
+            message: '从最近的自动保存恢复？',
             intent: Intent.SUCCESS,
             action: {
                 onClick: () => importData(data),
-                text: "Restore"
+                text: "恢复"
             }
         })    
     }

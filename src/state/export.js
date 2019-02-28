@@ -13,7 +13,7 @@ export default function ExportButton(){
                 <i className="fa fa-download" aria-hidden="true"></i> Download
             </button>
             <Popover position={Position.BOTTOM} content={<Menu>
-                <MenuItem iconName="unlock" text="Download with Credentials" onClick={e => downloadNotebook(true)} />
+                <MenuItem iconName="unlock" text="下载凭证" onClick={e => downloadNotebook(true)} />
             </Menu>}>
                 <button type="button" className="pt-button pt-icon-caret-down"></button>
             </Popover>
