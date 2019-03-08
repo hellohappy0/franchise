@@ -54,7 +54,7 @@ export class Configure extends React.Component {
 
 
     return <div>
-      <img src={ require('./img/bigquery.svg')} style={{ height: 40 }} />
+      <img src={"https://sqldata-1258014408.file.myqcloud.com/franchise/" + require('./img/bigquery.svg')} style={{ height: 40 }} />
       <div className='pt-callout pt-intent-primary' style={{margin: '10px 0'}}>
         <h5>获取BigQuery密钥文件</h5>
       <ol>

@@ -51,7 +51,7 @@ export class Configure extends Component{
     render(){
         const { config, connect } = this.props
         return <div>
-            <img src={require('../img/sqlite.svg')} style={{ height: 40 }} />
+            <img src={"https://sqldata-1258014408.file.myqcloud.com/franchise/" + require('../img/sqlite.svg')} style={{ height: 40 }} />
             <p>
                 Franchise包含了一个功能强大的 SQLite引擎 的在线版
             </p>
@@ -90,17 +90,17 @@ export class Configure extends Component{
 
                 <div className="samples">
                     <a href="https://sqldata-1258014408.file.myqcloud.com/franchise/demos/crime_v8.html">
-                    <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/map.png')})`}}>
+                    <div className="sample-thumb" style={{ backgroundImage: `url(${"https://sqldata-1258014408.file.myqcloud.com/franchise/" + require('../img/map.png')})`}}>
                         <div className="title">洛杉矶犯罪</div>
                     </div>
                     </a>
                     <a href="https://sqldata-1258014408.file.myqcloud.com/franchise/demos/sales.html">
-                    <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/scatter.png')})`}}>
+                    <div className="sample-thumb" style={{ backgroundImage: `url(${"https://sqldata-1258014408.file.myqcloud.com/franchise/" + require('../img/scatter.png')})`}}>
                         <div className="title">销售数据</div>
                     </div>
                     </a>
                     <a href="https://sqldata-1258014408.file.myqcloud.com/franchise/demos/enron.html">
-                    <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/card.png')})`}}>
+                    <div className="sample-thumb" style={{ backgroundImage: `url(${"https://sqldata-1258014408.file.myqcloud.com/franchise/" + require('../img/card.png')})`}}>
                         <div className="title">Enron电子邮件</div>
                     </div>
                     </a>

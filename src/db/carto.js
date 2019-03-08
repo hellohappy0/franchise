@@ -47,7 +47,7 @@ export class Configure extends React.Component {
       </div>
 
     return <div>
-      <img src={require('./img/carto.png')} style={{height: 40}} />
+      <img src={"https://sqldata-1258014408.file.myqcloud.com/franchise/" + require('./img/carto.png')} style={{height: 40}} />
       <div className='pg-form'>
         <div>
           <div>

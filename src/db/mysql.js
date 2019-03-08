@@ -80,7 +80,7 @@ export class Configure extends React.Component {
 
 
     return <div>
-      <img src={ require('./img/mysql.svg')} style={{ height: 40 }} />
+      <img src={"https://sqldata-1258014408.file.myqcloud.com/franchise/" + require('./img/mysql.svg')} style={{ height: 40 }} />
       <p />
       <div className='pg-form'>
 
