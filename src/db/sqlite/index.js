@@ -77,7 +77,7 @@ export class Configure extends Component{
                 <div style={{ display: 'flex', alignItems: 'flex-end' }}>
                     <div className="open-thumb" onClick={e => this.picker.click()} style={{ flexShrink: 0 }}>
                         <i className="fa fa-3x fa-folder-open" aria-hidden="true"></i>
-                        <div style={{ display: 'inline-block', width: 70, marginLeft: 10 }}>Browse Data File</div>
+                        <div style={{ display: 'inline-block', width: 70, marginLeft: 10 }}>从本机文件打开</div>
                     </div>
                     <div style={{ flexGrow: 1 }}> 或创建一个 <a href="javascript:void(0)" onClick={e => connectDB()}>空的数据簿</a> </div>
                 </div>
