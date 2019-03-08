@@ -49,7 +49,7 @@ class Header extends React.PureComponent {
     render(){
         return <div className="header-wrap">
             <div className="header">
-                <a href="/" target="_blank"><h1>Franchise</h1></a>
+                <a href="https://sqldata.postgraduate.top" target="_blank"><h1>Franchise</h1></a>
                 <SloganToggler />
                 { this.props.empty ? null : <ExportButton /> }
             </div>   
@@ -61,7 +61,8 @@ class SloganToggler extends React.PureComponent {
     slogans = [
         '点击标语文本会自动变哦',
 
-        'sql客户端的快餐店',
+        '你可以在这里找到一些经济数据库',
+		'sql客户端的快餐店',
         '给我你渴望自由呼吸的缩成一团的数据',
         '你是怎么念 sql 的？',
         '我可以把你和主要的数据比较一下',

@@ -89,17 +89,17 @@ export class Configure extends Component{
                 </p>
 
                 <div className="samples">
-                    <a href="/demos/crime_v8.html">
+                    <a href="https://sqldata-1258014408.file.myqcloud.com/franchise/demos/crime_v8.html">
                     <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/map.png')})`}}>
                         <div className="title">洛杉矶犯罪</div>
                     </div>
                     </a>
-                    <a href="/demos/sales.html">
+                    <a href="https://sqldata-1258014408.file.myqcloud.com/franchise/demos/sales.html">
                     <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/scatter.png')})`}}>
                         <div className="title">销售数据</div>
                     </div>
                     </a>
-                    <a href="/demos/enron.html">
+                    <a href="https://sqldata-1258014408.file.myqcloud.com/franchise/demos/enron.html">
                     <div className="sample-thumb" style={{ backgroundImage: `url(${require('../img/card.png')})`}}>
                         <div className="title">Enron电子邮件</div>
                     </div>

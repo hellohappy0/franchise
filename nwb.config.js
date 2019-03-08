@@ -23,7 +23,7 @@ module.exports = {
             output: {
                 comments: false
             },
-            sourceMap: true,
+            sourceMap: false,
             exclude: /worker\.js/
         }
     },
